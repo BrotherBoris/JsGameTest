@@ -1,5 +1,7 @@
 //Control
-let IsActive = false; let FrameCount =0;
+let isActive = false; let frameCount =0;
+let frameCountDisplay = document.getElementById("FrameCount");
+let frameRateDisplay = document.getElementById("FrameRate");
 //Control
 
 function checkArrowKey(e) {
@@ -21,24 +23,43 @@ function checkArrowKey(e) {
 }
 
 function enableKeyBoard(){
-    document.onkeydown -= checkArrowKey;
-}
-function disableKeyBoard(){
     document.onkeydown = checkArrowKey;
 }
+function disableKeyBoard(){
+    document.onkeydown -= checkArrowKey;
+}
+
+function updateFrameCount(){
+    frameCountDisplay.innerText = frameCount;
+}
+
+
+function calculateFrameRate(){
+   
+}
+
 
 function start() {
+    isActive = true;
+}
 
+function end() {
+    isActive = false;
+    disableKeyBoard();
 }
 
 
 function gameLoop(){
-    document.onkeydown = checkArrowKey;
-
-
-    while (IsActive==true) {
-
-        FrameCount++;
+    start();
+    enableKeyBoard();
+    while (isActive == true) {
+        frameCount++;
+        updateFrameCount();      
+        
+        //failsafe
+        if (frameCount == 50000) {
+            end();
+        }
     }
 
 
