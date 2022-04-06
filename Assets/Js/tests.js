@@ -1,5 +1,10 @@
 let display = document.getElementById("Timer");
 
+
+//asyncs
+//setTimeout(showTime, 1000);
+//setInterval(function (){displayTime(display)},1000);
+
 function displayTime(display) {
     let d = new Date();
     let h = d.getHours();
@@ -19,7 +24,6 @@ function displayTime(display) {
     //console.log(time);
     display.innerText = time;
 }
-setInterval(function (){displayTime(display)},1000);
 
 //showTime();
 function showTime(){

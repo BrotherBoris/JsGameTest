@@ -10,15 +10,20 @@
 
 <body>
     <header class="Header">
-        <div style="background-color: red;
-                width: 20%;margin: auto;overflow: hidden">
+        <div style="width: 15%;margin: auto;overflow: hidden">
             <h1 style="display: inline;">Clock</h1>
-            <p id="Timer" style="background-color: black;font-size: 15px;display: inline; float: right;">Time:??:??:??</p>
+            <div style="font-size: 15px;">
+                <p style="display: inline;">Time:</p>
+                <p style="display: inline;"id="Timer" ></p>
+                <button style="background-color: rgb(0, 0, 0, 0.2);"
+                    onclick="setInterval(function (){displayTime(display),event.target.remove()},1000);">
+                    Begin</button>
+            </div>
         </div>
     </header>
     <main>
         <div class="ContentBox">
-
+            
         </div>
     </main>
 </body>

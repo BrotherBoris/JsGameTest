@@ -1,73 +1,14 @@
-h1 {
-    font-size: 25px;
-}
-
-h2 {
-    font-size: 21px;
-}
-
-h3 {
-    font-size: 19px;
-}
-
-p,
-a {
-    font-size: 18px;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    width: 100%;
-    max-width: 185px;
-    max-height: 185px;
-}
-
-input {
-    all: unset;
-    background: rgb(21, 76, 148);
-    cursor: pointer;
-    border-radius: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-input:disabled {
-    background: rgb(13, 48, 94);
-    cursor: not-allowed
-}
-
-button {
-    all: unset;
-    background: rgb(21, 76, 148);
-    cursor: pointer;
-    border-radius: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-button:disabled {
-    background: rgb(13, 48, 94);
-    cursor: not-allowed
-}
-
-select {
-    all: unset;
-    background: rgb(21, 76, 148);
-    padding-left: 5px;
-    padding-right: 50px;
-    color: white;
-    border-radius: 10px;
-}
-
-body,
-a {
+h1{font-size:25px;}h2{font-size:21px;}h3{font-size:19px;}p,a{font-size:18px;}a{text-decoration:none;}
+ul{list-style:none;}img{width:100%;max-width:185px;max-height:185px;}
+input{all:unset;background:rgb(21, 76, 148);cursor:pointer;
+    border-radius:10px;padding-left:5px;padding-right:5px;}
+input:disabled{background:rgb(13, 48, 94);cursor: not-allowed}
+button{all: unset;background:rgb(21, 76, 148);cursor: pointer;border-radius:10px;
+    padding-left:5px;padding-right:5px;
+}button:disabled {background: rgb(13, 48, 94);cursor:not-allowed}
+select{all:unset;background:rgb(21, 76, 148);padding-left:5px;
+    padding-right:50px;color:white;border-radius:10px;}
+body,a{
     background: rgb(68, 125, 199);
     /* Fonts */
     line-height: 1.5;
