@@ -4,19 +4,24 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel="stylesheet" href="Assets/css/game.css">
+    <link rel="stylesheet" href="Assets/css/Clock.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div name="Header" style>
-        <button onclick="gameLoop()">Start</button>
-        <p style="display: inline;">Frame Count: </p>
-        <p style=" display: inline" id="FrameCount">?</p>
-        <a href="clock.html">Here</a>
-    </div>
+    <header class="Header">
+        <div style="background-color: red;
+                width: 20%;margin: auto;overflow: hidden">
+            <h1 style="display: inline;">Clock</h1>
+            <p id="Timer" style="background-color: black;font-size: 15px;display: inline; float: right;">Time:??:??:??</p>
+        </div>
+    </header>
+    <main>
+        <div class="ContentBox">
+
+        </div>
+    </main>
 </body>
-<script src="Assets/Js/main.js"></script>
 <script src="Assets/Js/tests.js"></script>
 
 </html>

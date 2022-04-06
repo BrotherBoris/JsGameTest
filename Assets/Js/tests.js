@@ -1,39 +1,37 @@
-let d = new Date();
+let display = document.getElementById("Timer");
 
-function updateTime() {
-    let lastSecont=0;
-    let actualSecond=0;
-    while(true){
-        actualSecond = d.getSeconds();
-        if(actualSecond != lastSecont){
-            lastSecont = actualSecond;
-            console.log(actualSecond);
-        }
+function displayTime(display) {
+    let d = new Date();
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+    
+    if (h < 10) {
+        h = "0" + h;
     }
+    if (m < 10) {
+        m = "0" + m;
+    }
+    if (s<10) {
+        s ="0"+s;
+    }
+    let time =h+":"+m+":"+s;;
+    //console.log(time);
+    display.innerText = time;
 }
+setInterval(function (){displayTime(display)},1000);
 
-let stop = 5;
-function Looper() {
-    setTimeout(myFunction, 1000);
-}
-
-function myFunction() {
-    if(stop != 0){
+//showTime();
+function showTime(){
+    let stop = 2;
+    displayTime(display)
+    if (stop != 0) {
         stop--;
-        const d = new Date;
-        console.log(d.getSeconds());
-        setTimeout(myFunction, 1000);
+        setTimeout(showTime, 1000);
     }
-    if (stop < 0) {
+    if (stop == 1){
         stop = 5;
     }
 }
 
-
-/* const {late} = await fetchBill();
-
-if (late > 0) {
-    let faded = (100-late)/100;
-    document.body.style.opacity = faded;
-} */
 //document.body.style.opacity = 0.25;
