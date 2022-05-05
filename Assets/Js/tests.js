@@ -1,5 +1,3 @@
-
-
 class Card {
     constructor(name, maxHealth, maxDefense, maxAttack){
         this.name = name;
@@ -10,18 +8,21 @@ class Card {
         this.maxAttack = maxAttack;
         this.currentAttack = maxAttack;
     }
+
     toString(){
         return "name:["+this.name+"]health:["+this.currentHealth+"/"+this.maxHealth+"]"+"defense:["+this.currentDefense+"/"+this.maxDefense+"]"+"attack:["+this.currentAttack+"/"+this.maxAttack+"]";
     }
 
 }
-newCardo = new Card("cardo",2);
 
-function creatNewCard() {
-    let newCard = new Card("jose",5);
-    console.log(newCard.toString());
-
+class Pod{
+    constructor(occupant, target){
+        this.occupant = occupant;
+        this.target = target;
+    }
+    
 }
+
 
 let cardArray = [];
 
@@ -39,3 +40,32 @@ for (let i = 0; i < cardArray.length; i++) {
     console.log(cardArray[i].toString());
     
 }
+
+function begin() {
+    let pod1 = new Pod(null,null);
+    let pod2 = new Pod(null,null);
+
+    pod1.occupant = cardArray[0];
+    pod2.occupant = cardArray[1];
+    
+    pod1.target = pod2.occupant;
+    pod2.target = pod1.occupant;
+
+
+    console.log("p1o "+ pod1.occupant.name);
+    console.log("p1t "+ pod1.target.name);
+
+    console.log("p2o "+ pod2.occupant.name);
+    console.log("p2t "+ pod2.target.name);
+    graphics(pod1.occupant.name, pod2.occupant.name);
+}
+
+function graphics(t1,t2) {
+    let a = document.getElementById("a");
+    let b = document.getElementById("b");
+
+    a.innerText = t1;
+    b.innerText = t2;
+}
+
+begin();
